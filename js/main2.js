@@ -1,14 +1,15 @@
 $(function () {
     var executed1 = false;
     var executed2 = false;
+    var executed3 = false;
 
-    $('.section2').waypoint(function () {
-        var targetNumber = $('.animate1').attr('data-rate');
+    $('.act_in').waypoint(function () {
+        var targetNumber = $('.counter').attr('data-rate');
         if (!executed1) {
-            var percent_number_step = $.animateNumber.numberStepFactories.append(' %')
-            $('.animate1').animateNumber({
+            var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+            $('.counter').animateNumber({
                 number: targetNumber,
-                numberStep: percent_number_step
+                numberStep: comma_separator_number_step
             }, 1500);
             executed1 = true;
         }
@@ -18,12 +19,11 @@ $(function () {
         }
     );
 
-
-    $('.section2').waypoint(function () {
-        var targetNumber = $('.animate2').attr('data-rate');
+    $('.act_in').waypoint(function () {
+        var targetNumber = $('.counter2').attr('data-rate');
         if (!executed2) {
             var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-            $('.animate2').animateNumber({
+            $('.counter2').animateNumber({
                 number: targetNumber,
                 numberStep: comma_separator_number_step
             }, 1500);
@@ -35,4 +35,19 @@ $(function () {
         }
     );
 
+    $('.act_in').waypoint(function () {
+        var targetNumber = $('.counter3').attr('data-rate');
+        if (!executed3) {
+            var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+            $('.counter3').animateNumber({
+                number: targetNumber,
+                numberStep: comma_separator_number_step
+            }, 1500);
+            executed3 = true;
+        }
+    },
+        {
+            offset: '80%'
+        }
+    );
 });
