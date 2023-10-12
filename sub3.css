@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+body{
+    font-family: 'NotoSansKR';
+    min-width: 1320px;
+}
+/* 헤더 */
+
+header ul {
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.top {
+    width: 1320px;
+    margin: 10px auto;
+    justify-content: flex-end;
+}
+
+.top li a {
+    margin-left: 10px;
+    color: green;
+}
+
+.top li a:hover {
+    background-color: rgba(0, 128, 0, 0.5);
+    color: #fff;
+}
+
+.header_in {
+    width: 1320px;
+    margin: auto;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_in img{
+    display: block;
+}
+
+.nav {
+    margin-right: 20px;
+}
+
+.nav> li{
+    position: relative;
+    z-index: 99;
+}
+
+.nav>li>a {
+    display: block;
+    padding: 0 20px;
+    margin-left: 70px;
+    box-sizing: border-box;
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav>li:hover>a {
+    color: #204A30;
+}
+
+/* 메뉴 css 호버효과*/
+.solid {
+    width: 100%;
+    margin: auto;
+    height: 3px;
+    background: green;
+    visibility: hidden;
+    opacity: 0;
+    transform: scaleX(0);
+    transition-property: opacity, transform;
+    transition-duration: 0.5s;
+}
+
+.nav>li:hover>a .solid {
+transform: scaleX(1);
+opacity: 1;
+visibility: visible;
+}
+
+/* 서브메뉴 */
+.sub{
+    position: absolute;
+    width: 156px;
+    display: none;
+    left: 50%;
+    margin-left: -45px;
+}
+
+.sub li a{
+    display: block;
+    padding: 10px 20px;    
+    background-color: rgba(0, 128, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.sub li:hover a{
+    background-color: #A5D6BA;
+    color: #2B9150;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 배너 */
+.banner{
+    margin-top: 20px;
+    position: relative;
+}
+
+.banner img{
+    display: block;
+    width: 100%;
+}
+
+/* 내용 */
+.challenge_banner{
+    width: 1320px;
+    height: 360px;
+    margin: auto;
+    background-color: rgba(58, 51, 50, 0.705);
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.challenge_banner h1{
+    margin-bottom: 30px;
+}
+
+.challenge_banner p{
+    margin-bottom: 20px;
+}
+
+.challenge{
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 300px;
+}
+
+.challenge_text{
+    width: 35%;
+    height: 689px;
+    background: url(./sub3_image/challenge_bg.png) no-repeat left 50px;
+    background-size: cover;
+    padding: 120px 0 0 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.challenge_text h3{
+    width: 320px;
+    margin: auto;
+    margin-right: 0;
+    margin-bottom: 50px;
+}
+
+.challenge_text p{
+    background: url(./sub3_image/click.png) no-repeat 280px center;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+}
+
+.challenge_img{
+ width: 60%;
+ overflow: hidden;
+}
+
+.challenge_img img{
+    box-shadow: 5px 5px 0 rgba(58, 51, 50, 0.3);
+}
+
+/* 기부 */
+.donation{
+    width: 80%;
+    height: 431px;
+    background: url(./sub3_image/donation_banner.png) no-repeat center top;
+    text-align: right;
+    padding: 120px 30px 0 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.donation h2{
+    font-size: 24px;
+    display: inline-block;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #000;
+}
+
+
+.donation p{
+    margin-top: 20px;
+    line-height: 25px;
+}
+
+.bg{
+    background-color: #DCEBDD;
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.bg h1{
+    margin: 20px 0;
+}
+
+.bg p{
+    line-height: 25px;
+}
+
+
+.do_list{
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1320px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px auto 50px;
+}
+
+.do_list li{
+    width: 272px;
+    height: 96px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin: 10px;
+}
+
+.do_list li img{
+    display: block;
+}
+
+/* 지구단원모집 */
+.member{
+    background: url(./sub3_image/member.png) no-repeat center top;
+    background-size: cover;
+    width: 100%;
+    height: 564px;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.member p{
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.member h3{
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin: 5px 0 30px;
+}
+
+.member a{
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+}
+
+.member a:hover{
+    background-color: #fff;
+    color: #204A30;
+    font-weight: bold;
+}
+
+.member span{
+    background-color: rgba(32, 74, 48, 0.7);
+}
+
+/* 푸터 */
+footer{
+    background-color: #4D806B;
+    padding: 30px 0;
+}
+
+.footer_in{
+    width: 1320px;
+    margin: auto;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    align-items: flex-end;
+}
+
+.link, .sns{
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+}
+
+.company{
+    width: 860px;
+}
+
+.link{
+    margin: 0 0 10px 10px;
+}
+
+.link li{
+    margin-right: 15px;
+}
+
+.link li a{
+    color: #fff;
+}
+
+.link li a:hover{
+    color: gold;
+    font-weight: 700;
+}
+
+.sns{
+   align-self: flex-start;
+}
+
+.sns li{
+    margin-left: 5px;
+}
+
+.sns li a{
+    opacity: 0.7;
+}
+
+.sns li a:hover{
+    opacity: 1;
+}
+
+.ft{
+    margin-left: 10px;
+}
+
+.ft p{
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
